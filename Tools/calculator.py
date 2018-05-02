@@ -1,4 +1,5 @@
-#coding:utf-8
+#coding=utf-8
+
 class Count:
 
     def __init__(self, a, b):

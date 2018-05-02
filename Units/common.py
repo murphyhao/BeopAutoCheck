@@ -1,8 +1,9 @@
-#coding:utf-8
-import sys
-import unittest
+#coding=utf-8
 
-sys.path.append("../BeopAutoCheck/Tools/")
+import unittest
+import sys
+
+sys.path.append("../BeopAutoCheck/")
 
 
 class CCaseCage(unittest.TestCase):

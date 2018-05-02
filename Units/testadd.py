@@ -1,10 +1,10 @@
-#coding:utf-8
+#coding=utf-8
+
 import unittest
 from common import CCaseCage
-from calculator import Count
+from Tools.calculator import Count
 
 
-@unittest.skip("")
 class TestAdd(CCaseCage):
 
     def test_add(self):
