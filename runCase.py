@@ -5,7 +5,6 @@ import time
 import unittest
 
 g_strCheckDir = "./Units/"
-g_discover = unittest.defaultTestLoader.discover(g_strCheckDir, pattern="test*.py")
 
 
 class CMyThread(threading.Thread):
@@ -16,8 +15,11 @@ class CMyThread(threading.Thread):
 
     def run(self):
         # 执行测试
-        runner = unittest.TextTestRunner()
-        runner.run(g_discover)
+        while True:
+            discover = unittest.defaultTestLoader.discover(g_strCheckDir, pattern="test*.py")
+            runner = unittest.TextTestRunner()
+            runner.run(discover)
+            time.sleep(self.m_nSleep)
 
 
 def StartThreads():
