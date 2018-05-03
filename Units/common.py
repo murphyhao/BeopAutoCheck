@@ -2,6 +2,7 @@
 
 import unittest
 import sys
+import time
 
 sys.path.append("../BeopAutoCheck/")
 
@@ -9,7 +10,9 @@ sys.path.append("../BeopAutoCheck/")
 class CCaseCage(unittest.TestCase):
 
     def setUp(self):
-        print("test case start")
+        self.m_tmStart = time.time()
 
     def tearDown(self):
-        print("test case end")
+        strUseTime = time.time() - self.m_tmStart
+        strUseTime = str('%.2f' % strUseTime)
+        print("This case cost %s sec" % strUseTime)
